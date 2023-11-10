@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning React</title>
+    
+  </head>
+  <body>
+    <!-- -->
+
+    
+    <div id="app">
+            <!-- This app is written with imperative programming -->
+            <!-- using plain javascript --> 
+    </div>
+    <script type="text/javascript">
+
+        // Select the div element with the app id
+        const app = document.getElementById('app');
+
+        // Create a new header element
+        const header = document.createElement('h1');
+
+        // Create a new text node inside header element
+        const headerContent = document.createTextNode('Develop. Preview. Ship. 🚀',);
+
+        // Append the text to the h1 element
+        header.appendChild(headerContent);
+
+        // Place the h1 element inside the div with app id
+        app.appendChild(header);
+    </script>
+
+    <div id="app2">
+        <!-- This app is written with Declarative programming -->
+        <!-- using react -->
+    </div>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/jsx">
+        const app2 = document.getElementById('app2');
+        ReactDOM.render(<h1>Develop. Preview. Ship. 🚀 React.</h1>, app2);
+      </script>
+  </body>
+</html>
