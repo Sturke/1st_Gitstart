@@ -1,14 +1,15 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>React Component Nesting</title>
+    <title>Babel Test</title>
     
   </head>
   <body>
     <!-- -->
-    <div id="app">
+    <div id="output">
         <!-- This app is written with Declarative programming -->
         <!-- using react component nesting-->
     </div>
@@ -16,26 +17,10 @@
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     
-    <script type="text/jsx">
-        const app = document.getElementById("app")
-      
-        
-        function Header() {
-            return <h1>Develop. Preview. Ship. 🚀</h1>;
-        }
-        function HomePage(){
-            return (
-                <div>
-                    <Header title="React 💙"/>
-                    <Header />
-                </div>
-        );
-        }
-        ReactDOM.render(<HomePage />, app);
-
-        
-        
-      </script>
+    <script type="text/babel">
+        const getMessage = () => "Hello World";
+        document.getElementById('output').innerHTML = getMessage();
+    </script>
 
 </body>
 </html>
